@@ -1,0 +1,30 @@
+.wrapper {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    background: url('../../assets/footerbg.png');
+    background-size: cover;
+}
+.wrapper img {
+    margin:30px auto;
+    width: 120px;
+}
+
+.Nav {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    
+}
+.Nav a {
+    color: #FFFFFF;
+}
+.divider hr {
+    border-top: 1px solid #A99696;
+    max-width: 1200px;
+}
