@@ -17,14 +17,14 @@ const links = [
 const Footer = () => {
     return (
         <div className={styles.wrapper}>
-            <img src={logo}/>
+            <img src={logo} alt='logo'/>
             <Nav className={styles.Nav} activeKey="/home">
-            {links.map(item => (
-          <Nav.Link className='px-4'key={item.id} as={Link} to={item.to}>{item.label}</Nav.Link>
-        ))}
+              {links.map(item => (
+              <Nav.Link className='px-4'key={item.id} as={Link} to={item.to}>{item.label}</Nav.Link>
+              ))}
             </Nav>
             <div className={styles.divider}>
-            <hr/>
+              <hr/>
             </div>
         </div> 
     )

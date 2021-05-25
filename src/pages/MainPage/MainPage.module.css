@@ -49,8 +49,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 4fr 4fr 4fr;
-    gap: 55px;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 20px;
     
 }
