@@ -21,7 +21,7 @@ const Navbar = () => {
       <span>Order online or call us (1800) 000 8808 <span><img src={vector}/><img className={styles.likeimg} src={vectorLike}/>WISHLIST</span></span>
       <hr/>
       <Header className={styles.header} bg="white" variant="white">
-        <Header.Brand href="#home"><img src={logo}/></Header.Brand>
+        <Header.Brand to='/' as={ Link }><img src={logo}/></Header.Brand>
         <Nav className="ml-auto" >
           {links.map(item => (
           <Nav.Link className='px-5' key={item.id} as={Link} to={item.to}>{item.label}</Nav.Link>
