@@ -1,8 +1,8 @@
 .wrapper {
-    position: relative;
+   margin:0 auto;
     
 }
-.wrapper img {
+.mainBg {
     width: 100%;
     height: 100vh;
 }
@@ -10,7 +10,7 @@
 .mainText {
     position: absolute;
     color:white;
-    top:250px;
+    top:420px;
     left:150px;
     font-size: 25px;
     font-weight: 400;
@@ -19,7 +19,7 @@
 
 .mainDescription {
     position: absolute;
-    top:280px;
+    top:460px;
     left:150px;
     width: 1045px;
     height: 187px;
@@ -28,9 +28,9 @@
     font-weight: 600;
    
 }
-.wrapper button {
+.wrapper .mainBtn {
     position: absolute;
-    top:500px;
+    top:700px;
     left:150px;
     background: none;
     padding:25px 58px;
@@ -39,9 +39,163 @@
     font-size: 16px;
     font-weight: 600;
 }
-.wrapper button:hover {
+.wrapper .mainBtn:hover {
     background: white;
     color:black;
     transition: .3s;
+    
+}
+.mainImages {
+    width: 380px;
+    height: 320px;
+}
+.grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 19% 19% 19%;
+    gap: 55px;
+    margin: 20px;
+    /* padding:20px; */
+}
+.grid span {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Playfair Display;
+    
+}
+
+.mainBanner img {
+    margin: 0 auto;
+    width: 100%;
+}
+.mainBanner .mainBannerText {
+    position: absolute;
+    top:80px;
+    left: 540px;
+    text-align: center;
+    width: 850px;
+    height: 128px;
+    font-family: Playfair Display;
+    text-transform: capitalize;
+    color:#fff;
+    font-size: 55px;
+    line-height: 63px;
+}
+.mainBanner .mainBannerDesk {
+    position: absolute;
+    top:230px;
+    left: 570px;
+    width: 790px;
+    height: 64px;
+    color:#fff;
+    font-family: Playfair Display;
+    text-align: center;
+    font-size: 25px;
+    line-height: 31px;
+    text-transform: capitalize;
+}
+.mainBanner .mainBtn {
+    position: absolute;
+    top:350px;
+    left: 860px;
+}
+
+.brandsSpan {
+    display: flex;
+    justify-content: center;
+    font-family: Playfair Display;
+    font-size: 29px;
+    text-transform: capitalize;
+    padding: 20px;
+    
+}
+
+.brands {
+    display: flex;
+    justify-content: center;
+    padding:30px;
+}
+
+.brandsContent {
+    margin-right: 100px;
+}
+
+.chooseSpan {
+    display: flex;
+    justify-content: center;
+    font-family: Playfair Display;
+    font-size: 29px;
+    color:#fff;
+    
+}
+.hrs {
+    background-color: #151515;
+    padding:100px;
+    
+}
+.hrs hr {
+    border: 2px solid #CAA462;
+    width: 300px;
+}
+.choose {
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    justify-content: center;
+    align-items: center;
+    gap:200px;
+}
+.choose span {
+    margin-top: 70px;
+    color:#CAA462;
+    width: 360px;
+    height: 101px;
+    font-size: 21px;
+    font-family: Playfair Display;
+    margin-bottom: 30px;
+}
+.choose span p {
+    color:#fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 18px;
+}
+.subscribe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.subscribe span {
+    font-family: Playfair Display;
+    font-size: 27px;
+    text-transform: capitalize;
+    padding-top: 40px;
+}
+.subscribe form {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.subscribe p {
+    font-family: Playfair Display;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-top: 40px;
+}
+.subscribe input {
+    width: 670px;
+    height: 40px;
+    font-family: Playfair Display;
+    border: 2px solid #CAA462;
+    box-sizing: border-box;
+}
+.subscribe button {
+    position: absolute;
+    border: none;
+    background-color: #CAA462;;
+    height: 40px;
+    color: #fff;
+    font-size: 12px;
+    font-family: Playfair Display;
     
 }

@@ -1,8 +1,11 @@
 import React from 'react'
 import styles from './Navbar.module.css'
 import logo from '../../assets/logo.svg'
+import vector from '../../assets/Vector.png'
+import vectorLike from '../../assets/Vectorlike.png'
 import  { Link } from 'react-router-dom'
 import { Navbar as Header, Nav } from 'react-bootstrap';
+
 
 const links = [
   {label: 'Catergories', to: '/categories', id: 1},
@@ -14,14 +17,18 @@ const links = [
 
 const Navbar = () => {
   return (
-    <Header className={styles.header} bg="dark" variant="dark">
-      <Header.Brand href="#home"><img src={logo}/></Header.Brand>
-      <Nav className="ml-auto" >
-        {links.map(item => (
-          <Nav.Link className='px-4'key={item.id} as={Link} to={item.to}>{item.label}</Nav.Link>
+    <div className={styles.wrapper}>
+      <span>Order online or call us (1800) 000 8808 <span><img src={vector}/><img className={styles.likeimg} src={vectorLike}/>WISHLIST</span></span>
+      <hr/>
+      <Header className={styles.header} bg="white" variant="white">
+        <Header.Brand href="#home"><img src={logo}/></Header.Brand>
+        <Nav className="ml-auto" >
+          {links.map(item => (
+          <Nav.Link className='px-5' key={item.id} as={Link} to={item.to}>{item.label}</Nav.Link>
         ))}
-      </Nav>
+        </Nav>
     </Header>
+    </div>
   )
 }
 

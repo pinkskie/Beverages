@@ -11,3 +11,25 @@
 .header a {
     color: #FFFFFF;
 }
+.wrapper span {
+    display: flex;
+    justify-content: space-between;
+    background-color: #151515!important;
+    color:white;
+    font-size: 13px;
+    padding:5px  140px;
+}
+.wrapper span img {
+    padding-right: 1px;
+}
+.wrapper hr {
+    padding: 0;
+    margin:0;
+}
+.likeimg {
+    position: relative;
+    width: 10px;
+    height: 8px;
+    top:8px;
+    right: 7px;
+}
