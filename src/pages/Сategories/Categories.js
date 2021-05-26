@@ -3,7 +3,7 @@ import styles from './Сategories.module.css'
 import glassesLogo from '../../assets/categories/glass 1.png'
 import wineLogo from '../../assets/categories/wine 1.png'
 import ingridLogo from '../../assets/categories/ingrid 1.png'
-import check from '../../assets/categories/checkmark 1.png'
+// import check from '../../assets/categories/checkmark 1.png'
 
 const Categories = () => {
     return (
