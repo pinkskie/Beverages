@@ -43,7 +43,7 @@ const MainPage = () => {
 
             <Col className={styles.grid}>
                 {items.map(x => (
-                    <h3><img className={styles.mainImages} alt={x.title} src={x.src} key={x.id} />{x.title}</h3>))}
+                    <div className={styles.gridImg}><img className={styles.mainImages} alt={x.title} src={x.src} key={x.id} /><h3>{x.title}</h3></div>))}
             </Col>
 
             <Col className={styles.mainBanner}>
@@ -53,7 +53,7 @@ const MainPage = () => {
                 <button className={styles.mainBtn}>Shop now</button>
             </Col>
 
-            <Col>
+            <Col className={styles.brands}>
                 <h3 className={styles.brandsSpan}>Popular brands</h3>
                 <div className={styles.brands}>
                     {brands.map(x => <img className={styles.brandsContent}src={x.src} alt={x.id} key={x.id} />)}

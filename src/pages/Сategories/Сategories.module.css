@@ -1,0 +1,144 @@
+* { box-sizing: border-box }
+body {margin: 0}
+
+
+.wrapper {
+    background-color: #151515;
+    width: 100%;
+    padding: 20px;
+
+}
+button {
+    background: none;
+    border:1px solid #CAA462;
+    width: 150px;
+    height: 50px;
+    color:#CAA462;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Playfair Display;
+    font-weight: 600;
+}
+button:hover {
+    background-color: #CAA462;
+    color: black;
+    transition: .3s;
+}
+.glasses {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    align-items: center;
+    border:1px solid #CAA462;
+}
+.glasses img {
+    flex:1;
+    width: 680px;
+    height: 380px;
+    padding: 50px;
+}
+.glasses section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 100px;
+    margin-left: 160px;
+}
+.glasses section h3 {
+    margin-left: 10px;
+    color: #CAA462;
+    font-size: 28px;
+    font-family: Playfair Display;
+}
+
+.glasses li {
+    list-style: none;
+    color:#fff;
+    font-size: 24px;
+    font-family: Playfair Display;
+    line-height: 26px;
+    margin-top: 10px;
+}
+.glasses button {
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+.checkmark {
+    width: 15px;
+    height: 15px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    align-items: center;
+    border:1px solid #CAA462;
+    margin-top: 36px;
+    padding:50px;
+}
+.categories img {
+    flex:1;
+    padding: 50px;
+}
+.categories section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 100px;
+    margin-left: 160px;
+}
+.categories section h3 {
+    margin-left: 10px;
+    color: #CAA462;
+    font-size: 28px;
+    font-family: Playfair Display;
+}
+.categories li {
+    list-style: none;
+    color:#fff;
+    font-size: 24px;
+    font-family: Playfair Display;
+    line-height: 26px;
+    margin-top: 10px;
+}
+.categories button {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.ingredients {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    align-items: center;
+    border:1px solid #CAA462;
+    margin-top: 36px;
+    padding:50px;
+}
+.ingredients img {
+    flex:1;
+    padding: 50px;
+}
+.ingredients section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 100px;
+    margin-left: 160px;
+}
+.ingredients section h3 {
+    margin-left: 10px;
+    color: #CAA462;
+    font-size: 28px;
+    font-family: Playfair Display;
+}
+.ingredients li {
+    list-style: none;
+    color:#fff;
+    font-size: 24px;
+    font-family: Playfair Display;
+    line-height: 26px;
+    margin-top: 10px;
+}
+.ingredients button {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
