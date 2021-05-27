@@ -12,6 +12,7 @@ import Jimbeam from '../../assets/brands/jimbeam.png'
 import Milestone from '../../assets/brands/milestone.png'
 import Miller from '../../assets/brands/miller.png'
 import { Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 
 const items = [
@@ -38,7 +39,7 @@ const MainPage = () => {
             <Col className={styles.header}>
                 <span className={styles.mainText}>Welcome to our store</span>
                 <h1 className={styles.mainDescription}>Shop Our Amazing Selection of <br/>Liquor, Beer, And Wine</h1>
-                <div><button className={styles.mainBtn}>Shop now</button></div>
+                <div><Link to='/coctails' className={styles.mainBtn}>Shop now</Link></div>
             </Col>
 
             <Col className={styles.grid}>
@@ -50,10 +51,10 @@ const MainPage = () => {
                 <h1 className={styles.mainBannerText}>Get an Extra 10% off your first <br/>order</h1>
                 <span className={styles.mainBannerDesk}>With a large selection of popular spirits and hard to find rare liquors,
                 <br/> we are your one stop shop for all your alcohol needs.</span>
-                <button className={styles.mainBtn}>Shop now</button>
+                <Link to='/coctails' className={styles.mainBtn}>Shop now</Link>
             </Col>
 
-            <Col className={styles.brands}>
+            <Col >
                 <h3 className={styles.brandsSpan}>Popular brands</h3>
                 <div className={styles.brands}>
                     {brands.map(x => <img className={styles.brandsContent}src={x.src} alt={x.id} key={x.id} />)}
