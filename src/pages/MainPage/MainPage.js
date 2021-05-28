@@ -13,6 +13,7 @@ import Milestone from '../../assets/brands/milestone.png'
 import Miller from '../../assets/brands/miller.png'
 import { Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 
 const items = [
@@ -35,6 +36,8 @@ const brands = [
 
 
 const MainPage = () => {
+
+    const [subscribe, setSubscribe] = useState(false);
 
     return (
         <div className={styles.wrapper}>
@@ -79,8 +82,9 @@ const MainPage = () => {
                 <span>Get our latest news and special sales </span>
                 <p>YOU MAY UNSUBSCRIBE AT ANY MOMENT. FOR THAT PURPOSE, PLEASE FIND OUR CONTACT INFO IN THE LEGAL NOTICE.</p>
                 <form>
-                    <input type='text' id='input' placeholder='Email Adress'></input>
-                    <button >SUBSCRIBE</button>
+                    {subscribe === true ? (<div className={styles.subscribeSuccess}>YOU HAVE SUCCESSFULLY SUBSCRIBED</div>): 
+                    (<><input type='text' id='input' placeholder='Email Adress'></input> {/* если input пустой - сделать button disablе */}
+                    <button onClick={() => setSubscribe(true)}>SUBSCRIBE</button></>)} {/* () -  чтобы не вызывать функуцию сразу , помогли*/} 
                 </form>
             </div>
         </div>

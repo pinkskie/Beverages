@@ -30,10 +30,8 @@ body {margin: 0}
     align-items: center;
     border:1px solid #CAA462;
 }
-.glasses img {
+.glassesImg {
     flex:1;
-    width: 680px;
-    height: 380px;
     padding: 50px;
 }
 .glasses section {
@@ -44,7 +42,7 @@ body {margin: 0}
     margin-left: 160px;
 }
 .glasses section h3 {
-    margin-left: 10px;
+    margin-left: 30px;
     color: #CAA462;
     font-size: 28px;
     font-family: Playfair Display;
@@ -58,15 +56,14 @@ body {margin: 0}
     line-height: 26px;
     margin-top: 10px;
 }
+.glasses li img {
+    margin-right: 15px;
+}
 .glasses button {
     margin-top: 40px;
     margin-bottom: 100px;
+    margin-left: 30px;
 }
-.checkmark {
-    width: 15px;
-    height: 15px;
-}
-
 .categories {
     display: grid;
     grid-template-columns: 6fr 6fr;
@@ -75,7 +72,7 @@ body {margin: 0}
     margin-top: 36px;
     padding:50px;
 }
-.categories img {
+.categoriesImg {
     flex:1;
     padding: 50px;
 }
@@ -87,7 +84,7 @@ body {margin: 0}
     margin-left: 160px;
 }
 .categories section h3 {
-    margin-left: 10px;
+    margin-left: 20px;
     color: #CAA462;
     font-size: 28px;
     font-family: Playfair Display;
@@ -100,9 +97,13 @@ body {margin: 0}
     line-height: 26px;
     margin-top: 10px;
 }
+.categories li img{
+    margin-right: 15px;
+}
 .categories button {
     margin-top: 40px;
     margin-bottom: 80px;
+    margin-left: 20px;
 }
 
 .ingredients {
@@ -113,10 +114,11 @@ body {margin: 0}
     margin-top: 36px;
     padding:50px;
 }
-.ingredients img {
+.ingredientsImg {
     flex:1;
     padding: 50px;
 }
+
 .ingredients section {
     display: flex;
     flex-direction: column;
@@ -125,7 +127,7 @@ body {margin: 0}
     margin-left: 160px;
 }
 .ingredients section h3 {
-    margin-left: 10px;
+    margin-left: 20px;
     color: #CAA462;
     font-size: 28px;
     font-family: Playfair Display;
@@ -138,9 +140,13 @@ body {margin: 0}
     line-height: 26px;
     margin-top: 10px;
 }
+.ingredients li img{
+    margin-right: 15px;
+}
 .showBtn {
     margin-top: 40px;
     margin-bottom: 80px;
+    margin-left: 20px;
     display: inline-block;
     background: none;
     border:1px solid #CAA462;
@@ -151,6 +157,7 @@ body {margin: 0}
     font-family: Playfair Display;
     font-weight: 600;
     text-decoration: none;
+    
 }
 .showBtn:hover {
     background-color: #CAA462;

@@ -211,3 +211,15 @@
     font-family: Playfair Display;
     
 }
+.subscribeSuccess {
+    color:white;
+    background-color: #CAA462;
+    text-align: center;
+    border: none;
+    padding:10px;
+    width: 670px;
+    color: #fff;
+    font-size: 18px;
+    font-family: Playfair Display;
+
+}

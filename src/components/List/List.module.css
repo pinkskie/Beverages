@@ -5,7 +5,16 @@
     margin:0 auto;
     padding:100px 200px;
 
-
+}
+.h1x {
+    margin-top: 40px;
+    font-size: 24px;
+    font-family: Playfair Display;
+    text-align: center;
+}
+.hrr {
+    border: 2px solid #CAA462;
+    width: 300px;
 }
 .coctail img {
     width: 100%; 

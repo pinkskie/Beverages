@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import styles from './Details.module.css'
 import { Link, useParams } from 'react-router-dom'
-import { NavItem } from 'react-bootstrap'
+import { NavItem, Tab, Tabs } from 'react-bootstrap'
 import germany from '../../assets/details/de.png'
 import greatBritain from '../../assets/details/gb.png'
 import italy from '../../assets/details/it.png'
@@ -11,56 +11,75 @@ import check from '../../assets/categories/checkmark 1.png'
 
 const Details = () => {
     const { id } = useParams();
-    const [ingredients, setIngredients] = useState([])
-
+    const [details, setdetails] = useState({})
+    const [key, setKey] = useState('home');
 
     useEffect (() => {
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
         .then(res => res.json())
         .then(data => 
-            setIngredients(data.drinks))
+            setdetails(data.drinks[0]))
     }, [])
 
-  
+    const convert = (obj) => {
+        return Object
+          .keys(obj)
+        .filter(item => item.includes('strIngredient'))
+        .map(item => obj[item])
+        .filter(Boolean)
+    }
     return  (
         <div className={styles.wrapper}>
             <div>
-                <h1>{ingredients.map(x => (x.strDrink))}</h1>
+                <h1>{details.strDrink}</h1>
                 <hr/>
             </div>
             <div className={styles.ingredients}>
                 <span>
                     <h1>Ingredients</h1>
                     <section className={styles.itembox}>
+                        {convert(details).map(x=> <Link>{x}</Link>)} {/* помогли */}
                     </section>
                 </span>
             </div>
             <div className={styles.gridWrapper}>
-
-                
-                    <section className={styles.details}>
+                <section className={styles.details}>
+                    <span>
                         <h1>Details</h1>
                         <ul>
-                            <li><img src={check} alt='check'/> Category: {ingredients.map(x => (x.strCategory))}</li>
-                            <li><img src={check} alt='check'/> IBA: {ingredients.map(x => (x.strIBA))} Contemporary Classics</li> {/* if null */}
-                            <li><img src={check} alt='check'/> Alcoholic: {ingredients.map(x => (x.strAlcoholic))}</li>
-                            <li><img src={check} alt='check'/> Glass: {ingredients.map(x => (x.strGlass))}</li>
+                            <li><img src={check} alt='check'/> Category: {details.strCategory}</li>
+                            <li><img src={check} alt='check'/> IBA: {details.strIBA}</li> {/* if null */}
+                            <li><img src={check} alt='check'/> Alcoholic: {details.strAlcoholic}</li>
+                            <li><img src={check} alt='check'/> Glass: {details.strGlass}</li>
                         </ul>
-                    </section>
-               
-
+                    </span>
+                </section>
+            
                 <section className={styles.detailsImage}>
-                    {ingredients.map(x => <img src={x.strDrinkThumb} alt='coctail'/>)}
+                   <img src={details.strDrinkThumb} alt='coctail'/>
                 </section>
 
                 <section className={styles.detailsInstructions}>
-                    <h1>Instructions</h1>
                     <span>
-                        <button><img src={germany} alt='de'/></button>
-                        <button><img src={greatBritain} alt='gb'/></button>
-                        <button><img src={italy} alt='it'/></button>
+                        <h1>Instructions</h1> 
+                        <Tabs 
+                            id="controlled-tab-example"
+                            activeKey={key}
+                            onSelect={(k) => setKey(k)}
+                            className={`mb-3 ${styles.tabs}`}
+                        >
+                        <Tab eventKey="home" title={<img src={germany} alt='de'/>}>
+                            <p>{details.strInstructionsDE}</p>
+                        </Tab>
+                        <Tab eventKey="profile" title={<img src={greatBritain} alt='gb'/>}>
+                            <p>{details.strInstructions}</p>
+                        </Tab>
+                        <Tab eventKey="contact" title={<img src={italy} alt='it'/>}>
+                            <p>{details.strInstructionsIT}</p>
+                        </Tab>
+                        </Tabs>
+                     {/* помогли */}
                     </span>
-                    <p>{ingredients.map(x => x.strInstructions)}</p>
                 </section>
             </div>
             <button className={styles.Btn}><span>ADD TO WISHLIST</span></button>

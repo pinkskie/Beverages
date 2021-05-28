@@ -10,7 +10,7 @@ const Ingredients = () => {
     const [ingredients, setIngredients] = useState([])
 
     useEffect (() => {
-        fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+        fetch(`https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list`)
         .then(res => res.json())
         .then(data => 
             setIngredients(data.drinks))
@@ -23,36 +23,7 @@ const Ingredients = () => {
                 <hr/>
             </div>
             <div className={styles.itembox}>
-                <Link to='/'>gin</Link>
-                <Link to='/'>rum</Link>
-                <Link to='/'>amaretto</Link>
-                <Link to='/'>chocolate</Link>
-                <Link to='/'>gin</Link>
-                <Link to='/'>rum</Link>
-                <Link to='/'>amaretto</Link>
-                <Link to='/'>chocolate</Link>
-                <Link to='/'>gin</Link>
-                <Link to='/'>rum</Link>
-                <Link to='/'>amaretto</Link>
-                <Link to='/'>chocolate</Link>
-                <Link to='/'>gin</Link>
-                <Link to='/'>rum</Link>
-                <Link to='/'>amaretto</Link>
-                <Link to='/'>chocolate</Link>
-                <Link to='/'>gin</Link>
-                <Link to='/'>rum</Link>
-                <Link to='/'>amaretto</Link>
-                <Link to='/'>chocolate</Link>
-                <Link to='/'>gin</Link>
-                <Link to='/'>rum</Link>
-                <Link to='/'>amaretto</Link>
-                <Link to='/'>chocolate</Link>
-                <Link to='/'>gin</Link>
-                <Link to='/'>rum</Link>
-                <Link to='/'>amaretto</Link>
-                <Link to='/'>chocolate</Link>
-              
-               
+                {ingredients.map(x => <Link to='/'>{ x.strIngredient1 }</Link>)}
             </div>
         </div>
     )

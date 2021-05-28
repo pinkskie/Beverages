@@ -19,12 +19,29 @@
 }
 .ingredients {
     background-color: #000;
+    margin-bottom: 30px;
+    padding:27px;
 }
 .ingredients h1 {
     color: white;
     font-size: 36px;
+    margin:0;
+    padding:0;
+    margin-bottom: 20px;
 }
-.itembox a{
+.ingredients span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #fff;
+    padding:15px;
+}
+.itembox {
+    margin: 0 auto;
+}
+.itembox a  {
+    display: inline-block;
     text-transform: uppercase;
     color:white;
     background: #CAA462;
@@ -44,8 +61,13 @@
     background-color: #000;
     margin: 0 auto;
     width: 100%;
+    padding:20px;
 }
-
+.details span {
+    border:2px solid #fff;
+    display: block;
+    height: 100%;
+}
 .details h1 {
     color: white;
     font-size: 36px;
@@ -68,21 +90,28 @@
 
 .detailsImage img{
    width: 100%;
+
 }
 .detailsInstructions {
     background-color: #000;
+    padding:20px;
 }
 .detailsInstructions h1 {
     color: white;
     font-size: 36px;
 }
-.detailsInstructions button {
-    width: 24px;
-    height: 24px;
-    border: none;
-    background-color: #000;
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    
 }
-.detailsInstructions span {
+.detailsInstructions span:nth-child(1) {
+    border: 2px solid #fff;
+    display: block;
+    height: 100%;
+}
+.detailsInstructions span:nth-child(2) {
     display: flex;
     justify-content: center;
     gap: 15px;
