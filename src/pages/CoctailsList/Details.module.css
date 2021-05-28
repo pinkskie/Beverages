@@ -1,0 +1,117 @@
+.wrapper {
+    max-width: 1600px;
+
+    margin: 40px auto;
+}
+
+.wrapper h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Playfair Display;
+    font-size: 28px;
+    color:#000;
+    margin: 20px auto;
+}
+.wrapper hr {
+    border: 2px solid #CAA462;
+    width: 300px;
+}
+.ingredients {
+    background-color: #000;
+}
+.ingredients h1 {
+    color: white;
+    font-size: 36px;
+}
+.itembox a{
+    text-transform: uppercase;
+    color:white;
+    background: #CAA462;
+    font-size: 16px;
+    font-family: Playfair Display;
+    padding:9px 18px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.gridWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+}
+
+.details {
+    background-color: #000;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.details h1 {
+    color: white;
+    font-size: 36px;
+    margin:52px auto;
+}
+.details li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: White;
+    font-size: 22px;
+    font-family: Playfair Display;
+    margin-top: 16px;
+    text-align: left;
+}
+.details li img {
+    margin-left: 60px;
+    margin-right: 20px;
+}
+
+.detailsImage img{
+   width: 100%;
+}
+.detailsInstructions {
+    background-color: #000;
+}
+.detailsInstructions h1 {
+    color: white;
+    font-size: 36px;
+}
+.detailsInstructions button {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: #000;
+}
+.detailsInstructions span {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+.detailsInstructions p {
+    margin:25px auto;
+    width: 80%;
+    font-size: 22px;
+    font-family: Playfair Display;
+    text-align: left;
+    color:white;
+}
+
+.detailsInstructions button:nth-child(2) {
+    margin-top: 2px;
+}
+.Btn {
+    display: flex;
+    margin-top: 30px;
+    background-color: #CAA462;
+    border: none;
+    color:white;
+    width: 100%;
+    font-size: 18px;
+    font-family: Playfair Display;
+}
+.Btn span {
+    margin:5px auto;
+    border: 2px solid white;
+    width: 100%;
+}

@@ -8,7 +8,7 @@ body {margin: 0}
     padding: 20px;
 
 }
-button {
+.wrapper button {
     background: none;
     border:1px solid #CAA462;
     width: 150px;
@@ -19,7 +19,7 @@ button {
     font-family: Playfair Display;
     font-weight: 600;
 }
-button:hover {
+.wrapper button:hover {
     background-color: #CAA462;
     color: black;
     transition: .3s;
@@ -138,7 +138,23 @@ button:hover {
     line-height: 26px;
     margin-top: 10px;
 }
-.ingredients button {
+.showBtn {
     margin-top: 40px;
     margin-bottom: 80px;
+    display: inline-block;
+    background: none;
+    border:1px solid #CAA462;
+    padding:10px 55px;
+    color:#CAA462;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Playfair Display;
+    font-weight: 600;
+    text-decoration: none;
+}
+.showBtn:hover {
+    background-color: #CAA462;
+    color: black;
+    transition: .3s;
+    text-decoration: none;
 }

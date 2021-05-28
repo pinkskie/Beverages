@@ -3,6 +3,7 @@ import styles from './Сategories.module.css'
 import glassesLogo from '../../assets/categories/glass 1.png'
 import wineLogo from '../../assets/categories/wine 1.png'
 import ingridLogo from '../../assets/categories/ingrid 1.png'
+import { Link } from 'react-router-dom'
 // import check from '../../assets/categories/checkmark 1.png'
 
 const Categories = () => {
@@ -44,7 +45,8 @@ const Categories = () => {
                         <li>Cocktails of different categories for any <br/> evening.</li>
                         <li>For each ingredient, you are guaranteed to <br/> find several cocktails.</li>
                     </ul>
-                    <button>Show</button>
+                    <div><Link to='/ingredients' className={styles.showBtn}>Show</Link></div>
+                    {/* <div><Link to='/coctails' className={styles.mainBtn}>Shop now</Link></div> */}
                 </section>
             </div>
         </div>

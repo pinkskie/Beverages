@@ -194,6 +194,12 @@
     height: 40px;
     font-family: Playfair Display;
     border: 2px solid #CAA462;
+    font-size: 22px;
+}
+.subscribe input:focus {
+    width: 690px;
+    border: 2px solid #CAA462;
+    transition: .3s;
 }
 .subscribe button {
     position: absolute;

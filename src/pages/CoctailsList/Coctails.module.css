@@ -7,11 +7,41 @@
 
 
 }
-.coctail {
-    
-    
-}
 .coctail img {
+    width: 100%; 
+}
+
+.coctailName {
     width: 100%;
-    
+    font-size: 18px;
+    font-family: Playfair Display;
+    background-color: #CAA462;
+    color:#FFF;
+    text-transform: capitalize;
+    margin:10px auto;
+    border: none;
+    padding:5px;
+    /* border-radius: 5px; */
+}
+.coctailName span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid white;
+    width: 100%;
+    padding:5px;
+    /* border-radius: 5px; */
+}
+.coctailName img {
+    width: 16px;
+    height: 16px;
+}
+
+.coctailName:hover {
+    color:white;
+}
+.coctailName img:hover {
+    width: 21px;
+    height: 21px;
+    transition: .3s;
 }

@@ -1,0 +1,38 @@
+.wrapper {
+    max-width: 1600px;
+    min-height: 470px;
+    margin: 43px auto;
+}
+
+.wrapper h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Playfair Display;
+    font-size: 28px;
+    color:#000;
+    margin: 20px auto;
+}
+.wrapper hr {
+    border: 2px solid #CAA462;
+    width: 300px;
+}
+.itembox {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:16px 8px;
+    margin:0 auto;
+    padding:50px;    
+}
+.itembox a {
+    text-transform: uppercase;
+    color:white;
+    background: #CAA462;
+    font-size: 16px;
+    font-family: Playfair Display;
+    padding:9px 18px;
+    margin-right: 20px;
+    text-decoration: none;
+}

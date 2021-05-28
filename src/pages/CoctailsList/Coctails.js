@@ -1,10 +1,9 @@
 import React from 'react'
 import styles  from './Coctails.module.css'
-import alco from '../../assets/cock.png'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
-
+import favorites from '../../assets/favorites.png'
 
 const Coctails = () => {
 
@@ -23,7 +22,7 @@ const Coctails = () => {
             {list.map(x => (
                 <div key={x.idDrink} className={styles.coctail}>
                     <Link to={`/coctails/${x.idDrink}`}><img src={x.strDrinkThumb} alt={x.strDrink} /></Link>
-                    <div className={styles.coctailName}>{x.strDrink}</div>
+                    <button className={styles.coctailName}><span>{x.strDrink}<img src={favorites} alt='favorites'/></span></button>
                 </div>
             ))}
         </div>

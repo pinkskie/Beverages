@@ -33,7 +33,9 @@ const brands = [
     {id:6, src: Miller }
 ]
 
+
 const MainPage = () => {
+
     return (
         <div className={styles.wrapper}>
             <Col className={styles.header}>
@@ -77,8 +79,8 @@ const MainPage = () => {
                 <span>Get our latest news and special sales </span>
                 <p>YOU MAY UNSUBSCRIBE AT ANY MOMENT. FOR THAT PURPOSE, PLEASE FIND OUR CONTACT INFO IN THE LEGAL NOTICE.</p>
                 <form>
-                    <input type='text' placeholder='Email Adress'></input>
-                    <button>SUBSCRIBE</button>
+                    <input type='text' id='input' placeholder='Email Adress'></input>
+                    <button >SUBSCRIBE</button>
                 </form>
             </div>
         </div>
