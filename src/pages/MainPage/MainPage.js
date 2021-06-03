@@ -83,8 +83,11 @@ const MainPage = () => {
                 <p>YOU MAY UNSUBSCRIBE AT ANY MOMENT. FOR THAT PURPOSE, PLEASE FIND OUR CONTACT INFO IN THE LEGAL NOTICE.</p>
                 <form>
                     {subscribe === true ? (<div className={styles.subscribeSuccess}>YOU HAVE SUCCESSFULLY SUBSCRIBED</div>): 
-                    (<><input type='text' id='input' placeholder='Email Adress'></input> {/* если input пустой - сделать button disablе */}
-                    <button onClick={() => setSubscribe(true)}>SUBSCRIBE</button></>)} {/* () -  чтобы не вызывать функуцию сразу , помогли*/} 
+                    (<>
+                    <input type='text' id='input' placeholder='Email Adress'></input>  {/* если input пустой - сделать button disablе */}
+                    <button onClick={() => setSubscribe(true)}>SUBSCRIBE</button>
+                    
+                    </>)}  {/* () -  чтобы не вызывать функуцию сразу , изучить*/} 
                 </form>
             </div>
         </div>

@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import styles from './Ingredients.module.css'
 import { Link, useParams } from 'react-router-dom'
-import { NavItem } from 'react-bootstrap'
+
 
 const Ingredients = () => {
     const { id } = useParams();

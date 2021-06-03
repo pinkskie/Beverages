@@ -1,0 +1,87 @@
+.h1x {
+    margin-top: 40px;
+    font-size: 24px;
+    font-family: Playfair Display;
+    text-align: center;
+}
+.hrr {
+    border: 2px solid #CAA462;
+    width: 300px;
+}
+.searchInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchInner input {
+    width: 670px;
+    height: 40px;
+    font-family: Playfair Display;
+    border: 2px solid #CAA462;
+    font-size: 14px;
+}
+.searchInner input:focus {
+    width: 690px;
+    border: 2px solid #CAA462;
+    transition: .3s;
+}
+.searchInner button {
+    border: none;
+    background-color: #CAA462;;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: Playfair Display; 
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:70px;
+    margin:0 auto;
+    padding:100px 200px;
+
+}
+.coctail img {
+    width: 100%; 
+}
+
+.coctailName {
+    width: 100%;
+    font-size: 18px;
+    font-family: Playfair Display;
+    background-color: #CAA462;
+    color:#FFF;
+    text-transform: capitalize;
+    margin:10px auto;
+    border: none;
+    padding:5px;
+    /* border-radius: 5px; */
+}
+.coctailName span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid white;
+    width: 100%;
+    padding:5px;
+    /* border-radius: 5px; */
+}
+.coctailName img {
+    width: 16px;
+    height: 16px;
+}
+
+.coctailName:hover {
+    color:white;
+}
+.coctailName img:hover {
+    width: 21px;
+    height: 21px;
+    transition: .3s;
+}
+.searchInner {
+    margin:0 auto;
+}

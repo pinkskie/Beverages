@@ -10,7 +10,7 @@ import { Navbar as Header, Nav } from 'react-bootstrap';
 const links = [
   {label: 'Catergories', to: '/categories', id: 1},
   {label: 'Types', to: '/types', id: 2},
-  {label: 'Search', to: '/search', id: 3},
+  {label: 'Search', to: '/searchPage', id: 3},
   {label: 'About Us', to: '/about', id: 4},
   {label: 'Contacts', to: '/contacts', id: 5}
 ]

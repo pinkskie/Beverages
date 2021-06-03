@@ -8,6 +8,7 @@ import Details from 'pages/CoctailsList/Details';
 import Ingredients from 'pages/IngrediestsPage/Ingredients';
 import CategoriesPage from 'pages/CategoriesPage/CategoriesPage';
 import GlassesPage from 'pages/GlassesPage/GlassesPage';
+import SearchPage from 'pages/SearchPage/SearchPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/ingredientsPage'><Ingredients/></Route>
         <Route path='/categoriesPage'><CategoriesPage/></Route>
         <Route path='/glassesPage'><GlassesPage/></Route>
+        <Route patch='/searchPage'><SearchPage/></Route>
       </Switch>
       <Footer/>
     </BrowserRouter>

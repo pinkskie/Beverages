@@ -78,7 +78,7 @@ const Details = () => {
                             <p>{details.strInstructionsIT}</p>
                         </Tab>
                         </Tabs>
-                     {/* помогли */}
+                     {/* изучить */}
                     </span>
                 </section>
             </div>
