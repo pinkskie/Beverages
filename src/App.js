@@ -22,7 +22,7 @@ function App() {
         <Route path='/ingredientsPage'><Ingredients/></Route>
         <Route path='/categoriesPage'><CategoriesPage/></Route>
         <Route path='/glassesPage'><GlassesPage/></Route>
-        <Route patch='/searchPage'><SearchPage/></Route>
+        <Route path='/searchPage'><SearchPage/></Route>
       </Switch>
       <Footer/>
     </BrowserRouter>

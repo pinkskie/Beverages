@@ -211,6 +211,15 @@
     font-family: Playfair Display;
     
 }
+.subscribe button:disabled {
+    border: none;
+    background-color: #CAA462;;
+    height: 40px;
+    color: #fff;
+    font-size: 12px;
+    font-family: Playfair Display;
+    opacity: 80%;
+}
 .subscribeSuccess {
     color:white;
     background-color: #CAA462;

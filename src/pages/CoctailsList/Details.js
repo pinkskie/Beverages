@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import styles from './Details.module.css'
 import { Link, useParams } from 'react-router-dom'
-import { NavItem, Tab, Tabs } from 'react-bootstrap'
+import { Tab, Tabs } from 'react-bootstrap'
 import germany from '../../assets/details/de.png'
 import greatBritain from '../../assets/details/gb.png'
 import italy from '../../assets/details/it.png'
@@ -18,15 +18,15 @@ const Details = () => {
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
         .then(res => res.json())
         .then(data => 
-            setdetails(data.drinks[0]))
-    }, [])
+            setdetails(data.drinks?.[0]))
+    }, [id])
 
     const convert = (obj) => {
         return Object
-          .keys(obj)
-        .filter(item => item.includes('strIngredient'))
-        .map(item => obj[item])
-        .filter(Boolean)
+            .keys(obj || {})
+            .filter(item => item.includes('strIngredient'))
+            .map(item => obj[item])
+            .filter(Boolean)
     }
     return  (
         <div className={styles.wrapper}>

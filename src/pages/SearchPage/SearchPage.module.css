@@ -19,6 +19,7 @@
     font-family: Playfair Display;
     border: 2px solid #CAA462;
     font-size: 14px;
+    margin-top: 15px;
 }
 .searchInner input:focus {
     width: 690px;
@@ -32,11 +33,11 @@
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
-    font-family: Playfair Display; 
+    font-family: Playfair Display;
+    margin-top: 15px; 
 }
 
-
-.wrapper {
+.gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:70px;
@@ -83,5 +84,8 @@
     transition: .3s;
 }
 .searchInner {
+    margin:0 auto;
+}
+.cocktailsList {
     margin:0 auto;
 }

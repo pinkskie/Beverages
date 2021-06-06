@@ -17,27 +17,35 @@ import { useState } from 'react'
 
 
 const items = [
-    {id:1, src: Whiskey, title: 'Whiskey'},
-    {id:2, src: Tequila, title: 'Tequila'},
-    {id:3, src: Rum, title: 'Rum'},
-    {id:4, src: Gin, title: 'Gin'},
-    {id:5, src: Beer, title: 'Beer'},
-    {id:6, src: Wine, title: 'Wine'}
+    {id:'main1', src: Whiskey, title: 'Whiskey'},
+    {id:'main2', src: Tequila, title: 'Tequila'},
+    {id:'main3', src: Rum, title: 'Rum'},
+    {id:'main4', src: Gin, title: 'Gin'},
+    {id:'main5', src: Beer, title: 'Beer'},
+    {id:'main6', src: Wine, title: 'Wine'}
 ]
 
 const brands = [
-    {id:1, src: Bacardi },
-    {id:2, src: Branson },
-    {id:3, src: Genius },
-    {id:4, src: Jimbeam },
-    {id:5, src: Milestone },
-    {id:6, src: Miller }
+    {id:'main7', src: Bacardi },
+    {id:'main8', src: Branson },
+    {id:'main9', src: Genius },
+    {id:'main10', src: Jimbeam },
+    {id:'main11', src: Milestone },
+    {id:'main12', src: Miller }
 ]
+
 
 
 const MainPage = () => {
 
     const [subscribe, setSubscribe] = useState(false);
+
+    const [inputText, setInputText] = useState('')
+    
+    const handleChange = e => {
+        setInputText(e.target.value)
+    }
+
 
     return (
         <div className={styles.wrapper}>
@@ -49,7 +57,7 @@ const MainPage = () => {
 
             <Col className={styles.grid}>
                 {items.map(x => (
-                    <div className={styles.gridImg}><img className={styles.mainImages} alt={x.title} src={x.src} key={x.id} /><h3>{x.title}</h3></div>))}
+                    <div className={styles.gridImg} key={x.id}><img className={styles.mainImages} alt={x.title} src={x.src} /><h3>{x.title}</h3></div>))}
             </Col>
 
             <Col className={styles.mainBanner}>
@@ -84,8 +92,8 @@ const MainPage = () => {
                 <form>
                     {subscribe === true ? (<div className={styles.subscribeSuccess}>YOU HAVE SUCCESSFULLY SUBSCRIBED</div>): 
                     (<>
-                    <input type='text' id='input' placeholder='Email Adress'></input>  {/* если input пустой - сделать button disablе */}
-                    <button onClick={() => setSubscribe(true)}>SUBSCRIBE</button>
+                    <input type='text' id='input' placeholder='Email Adress' onChange={handleChange}/>{/* если input пустой - сделать button disablе */}
+                    <button onClick={() => setSubscribe(true)} disabled={!inputText.length}>SUBSCRIBE</button>
                     
                     </>)}  {/* () -  чтобы не вызывать функуцию сразу , изучить*/} 
                 </form>

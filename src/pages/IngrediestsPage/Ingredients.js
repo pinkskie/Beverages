@@ -2,11 +2,10 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import styles from './Ingredients.module.css'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const Ingredients = () => {
-    const { id } = useParams();
     const [ingredients, setIngredients] = useState([])
 
     useEffect (() => {

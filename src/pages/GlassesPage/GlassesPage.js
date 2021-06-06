@@ -2,11 +2,10 @@ import styles from './GlassesPage.module.css'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const GlassesPage = () => {
-    const { id } = useParams();
     const [ingredients, setIngredients] = useState([])
 
     useEffect (() => {
