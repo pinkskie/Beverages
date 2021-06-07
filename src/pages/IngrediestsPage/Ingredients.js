@@ -15,6 +15,7 @@ const Ingredients = () => {
             setIngredients(data.drinks))
     }, [])
 
+
     return  (
         <div className={styles.wrapper}>
             <div>
@@ -22,7 +23,7 @@ const Ingredients = () => {
                 <hr/>
             </div>
             <div className={styles.itembox}>
-                {ingredients.map(x => <Link to='/'>{ x.strIngredient1 }</Link>)}
+                {ingredients.map(x => <Link to={`/${x.strIngredient1}`}>{ x.strIngredient1 }</Link>)}
             </div>
         </div>
     )

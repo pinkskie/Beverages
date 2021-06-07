@@ -9,6 +9,8 @@ import Ingredients from 'pages/IngrediestsPage/Ingredients';
 import CategoriesPage from 'pages/CategoriesPage/CategoriesPage';
 import GlassesPage from 'pages/GlassesPage/GlassesPage';
 import SearchPage from 'pages/SearchPage/SearchPage';
+import Contacts from 'pages/Contacts/Contacts';
+import About from 'pages/About/About';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path='/categoriesPage'><CategoriesPage/></Route>
         <Route path='/glassesPage'><GlassesPage/></Route>
         <Route path='/searchPage'><SearchPage/></Route>
+        <Route path='/contacts'><Contacts/></Route>
+        <Route path='/about'><About/></Route>
       </Switch>
       <Footer/>
     </BrowserRouter>

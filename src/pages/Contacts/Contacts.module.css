@@ -1,0 +1,56 @@
+.wrapper h1 {
+    margin-top: 21px;
+    font-size: 24px;
+    font-family: Playfair Display;
+    text-align: center;
+}
+.wrapper hr {
+    border: 2px solid #CAA462;
+    width: 300px;
+}
+.content div{
+    font-family: Playfair Display;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.content span:first-child {
+    
+    font-size: 22px;
+    font-weight: 400;
+    font-family: Playfair Display;
+}
+.content span {
+    font-weight: 700;
+    font-family: Playfair Display;
+}
+.hr2 {
+    width: 1200px;
+}
+form {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 13% 13% 13%;
+    gap:20px;
+    justify-content: center;
+}
+form input {
+    border-radius: 5px;
+    border:1px solid ;
+    padding: 10px;
+}
+textarea {
+    padding: 10px;
+    width: 783px;
+    border-radius: 5px;
+    height: 200px;
+    margin-bottom: 25px;
+}
+.sendBtn {
+    margin-bottom: 30px;
+    border:none;
+    padding:10px 50px;
+    text-transform: uppercase;
+    background-color: #CAA462;
+    font-family: Playfair Display;
+}

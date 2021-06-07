@@ -1,0 +1,33 @@
+.wrapper h1 {
+    margin-top: 38px;
+    font-size: 24px;
+    font-family: Playfair Display;
+    text-align: center;
+}
+.wrapper hr {
+    border: 2px solid #CAA462;
+    width: 300px;
+}
+.content {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 20% 40%;
+    justify-content: center;
+    align-items: center;
+}
+.content img {
+    width: 300px;
+    height: 400px;
+}
+.content p {
+    font-size: 20px;
+    font-family: Playfair Display;
+    
+}
+.content p span {
+    color:#CAA462;
+}
+.content div {
+    box-shadow: 5px  5px  5px rgb(85, 82, 82);
+}
