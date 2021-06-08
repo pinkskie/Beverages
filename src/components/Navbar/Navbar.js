@@ -1,11 +1,9 @@
 import React from 'react'
 import styles from './Navbar.module.css'
 import logo from '../../assets/logo.svg'
-import vector from '../../assets/Vector.png'
-import vectorLike from '../../assets/Vectorlike.png'
 import  { Link } from 'react-router-dom'
 import { Navbar as Header, Nav } from 'react-bootstrap';
-
+import wishlist from '../../assets/wishlist.png'
 
 const links = [
   {label: 'Catergories', to: '/categories', id: 1},
@@ -17,18 +15,22 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div className={styles.wrapper}>
-      <span>Order online or call us (1800) 000 8808 <span><img src={vector} alt='wishlist'/><img className={styles.likeimg} src={vectorLike} alt='like'/>WISHLIST</span></span>
+    <>
+      <div className={styles.wrapper}>
+          <span>Order online or call us (1800) 000 8808</span><Header.Brand to='/wishlist' as={ Link }><span><img src={wishlist} alt='wishlist' to='/wishlist' as={ Link } />WISHLIST</span></Header.Brand>
+      </div>
       <hr/>
-      <Header className={styles.header} bg="white" variant="white">
-        <Header.Brand to='/' as={ Link }><img src={logo} alt='logo'/></Header.Brand>
-        <Nav className="ml-auto" >
-          {links.map(item => (
-          <Nav.Link className='px-5' key={item.id} as={Link} to={item.to}>{item.label}</Nav.Link>
-        ))}
-        </Nav>
-    </Header>
-    </div>
+      <div className={styles.navlinks}>
+        <Header className={styles.header} bg="white" variant="white">
+          <Header.Brand to='/' as={ Link }><img src={logo} alt='logo'/></Header.Brand>
+          <Nav className="ml-auto" >
+            {links.map(item => (
+            <Nav.Link className='px-5' key={item.id} as={Link} to={item.to}>{item.label}</Nav.Link>
+          ))}
+          </Nav>
+        </Header>
+      </div>
+    </>
   )
 }
 

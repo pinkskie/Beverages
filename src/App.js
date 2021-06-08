@@ -11,6 +11,7 @@ import GlassesPage from 'pages/GlassesPage/GlassesPage';
 import SearchPage from 'pages/SearchPage/SearchPage';
 import Contacts from 'pages/Contacts/Contacts';
 import About from 'pages/About/About';
+import Wishlist from 'pages/Wishlist/Wishlist';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/searchPage'><SearchPage/></Route>
         <Route path='/contacts'><Contacts/></Route>
         <Route path='/about'><About/></Route>
+        <Route path='/wishlist'><Wishlist/></Route>
       </Switch>
       <Footer/>
     </BrowserRouter>
