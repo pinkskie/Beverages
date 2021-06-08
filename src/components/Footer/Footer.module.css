@@ -27,4 +27,5 @@
 .divider hr {
     border-top: 1px solid #A99696;
     max-width: 1200px;
+    margin:10px auto;
 }

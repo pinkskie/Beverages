@@ -7,11 +7,13 @@
 .hrr {
     border: 2px solid #CAA462;
     width: 300px;
+    margin:0 auto;
 }
 .searchInner {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
 }
 .searchInner input {
     width: 670px;
@@ -42,7 +44,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:70px;
     margin:0 auto;
-    padding:100px 200px;
+    padding:70px 200px;
 
 }
 .coctail img {

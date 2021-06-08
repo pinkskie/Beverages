@@ -16,6 +16,7 @@
 .wrapper hr {
     border: 2px solid #CAA462;
     width: 300px;
+    margin:0 auto;
 }
 .itembox {
     display: flex;

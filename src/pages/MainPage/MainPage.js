@@ -92,9 +92,10 @@ const MainPage = () => {
                 <form>
                     {subscribe === true ? (<div className={styles.subscribeSuccess}>YOU HAVE SUCCESSFULLY SUBSCRIBED</div>): 
                     (<>
+                    <div className={styles.form}>
                     <input type='text' id='input' placeholder='Email Adress' onChange={handleChange}/>{/* если input пустой - сделать button disablе */}
                     <button onClick={() => setSubscribe(true)} disabled={!inputText.length}>SUBSCRIBE</button>
-                    
+                    </div>
                     </>)}  {/* () -  чтобы не вызывать функуцию сразу , изучить*/} 
                 </form>
             </div>

@@ -142,6 +142,7 @@
 .hrs hr {
     border: 2px solid #CAA462;
     width: 300px;
+    margin:0 auto;
 }
 .choose {
     display: grid;
@@ -178,15 +179,20 @@
     padding-top: 40px;
     text-align: center;
 }
-.subscribe form {
+/* .subscribe form {
     padding-top: 30px;
     padding-bottom: 50px;
-}
+} */
 .subscribe p {
     font-family: Playfair Display;
     text-transform: uppercase;
     font-size: 18px;
-    padding-top: 40px;
+    margin-top: 40px;
+}
+
+.form {
+    margin:40px auto;
+    
 }
 .subscribe input {
     margin: 0 auto;
@@ -195,6 +201,7 @@
     font-family: Playfair Display;
     border: 2px solid #CAA462;
     font-size: 22px;
+    border-radius: none;
 }
 .subscribe input:focus {
     width: 690px;
@@ -225,10 +232,10 @@
     background-color: #CAA462;
     text-align: center;
     border: none;
-    padding:10px;
-    width: 670px;
+    padding:5px;
+    width: 750px;
     color: #fff;
     font-size: 18px;
     font-family: Playfair Display;
-
+    margin:40px auto;
 }
