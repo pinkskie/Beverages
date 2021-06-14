@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import styles from './Details.module.css'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { Tab, Tabs } from 'react-bootstrap'
 import germany from '../../assets/details/de.png'
 import greatBritain from '../../assets/details/gb.png'
@@ -42,13 +42,17 @@ const Details = () => {
         <div className={styles.wrapper}> 
             <div>
                 <h1>{details.strDrink}</h1>
-                <hr/>
+                <div className={styles.divider}>
+                    <hr/>
+                    <div></div>
+                    <hr/>
+                </div>
             </div>
             <div className={styles.ingredients}>
                 <span>
                     <h1>Ingredients</h1>
                     <section className={styles.itembox}>
-                        {convert(details).map(x=> <Link>{x}</Link>)} {/* помогли */}
+                        {convert(details).map(x=> <div>{x}</div>)} {/* помогли */}
                     </section>
                 </span>
             </div>

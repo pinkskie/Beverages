@@ -55,3 +55,19 @@
     height: 21px;
     transition: .3s;
 }
+.divider {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+
+}
+.divider div {
+    border: 4px solid #CAA462;
+    border-radius: 100%;
+    
+}
+.divider hr{
+    width: 137px;
+    border: 1px solid #CAA462
+}

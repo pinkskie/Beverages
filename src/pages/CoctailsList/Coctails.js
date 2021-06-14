@@ -31,7 +31,11 @@ const Coctails = () => {
     return (
         <>
         <h1 className={styles.h1x}>Cocktails</h1>
-        <hr className={styles.hrr}/>
+        <div className={styles.divider}>
+            <hr/>
+            <div></div>
+            <hr/>
+        </div>
         <div className={styles.wrapper}>
             {list.map(x => (
                 <div key={x.idDrink} className={styles.coctail}>
