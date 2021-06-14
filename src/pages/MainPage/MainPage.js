@@ -77,7 +77,11 @@ const MainPage = () => {
             <div className={styles.hrs}>
                 <Col>
                     <span className={styles.chooseSpan}>Why Choos Us</span>
-                    <hr/>
+                    <div className={styles.divider}>
+                        <hr/>
+                        <div></div>
+                        <hr/>
+                    </div>
                 </Col>
                 <Col className={styles.choose}>
                     <span>Quality<p>All our beverages are supplied by proven manufacturers from all around the world. We guarantee the high-class quality.</p></span>

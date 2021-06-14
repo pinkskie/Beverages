@@ -139,11 +139,7 @@
     padding:100px;
     
 }
-.hrs hr {
-    border: 2px solid #CAA462;
-    width: 300px;
-    margin:0 auto;
-}
+
 .choose {
     display: grid;
     grid-template-columns: 20% 20% 20%;
@@ -238,4 +234,20 @@
     font-size: 18px;
     font-family: Playfair Display;
     margin:40px auto;
+}
+.divider {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+
+}
+.divider div {
+    border: 4px solid #CAA462;
+    border-radius: 100%;
+    
+}
+.divider hr{
+    width: 137px;
+    border: 1px solid #CAA462
 }

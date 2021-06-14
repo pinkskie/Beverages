@@ -22,8 +22,11 @@ function App() {
         <Route path='/categories'><Categories/></Route>
         <Route path='/coctails/:id'><Details/></Route>
         <Route path='/coctails'><Coctails/></Route>
+        <Route path='/ingredientsPage/:ingredients_name'><Ingredients/></Route>
         <Route path='/ingredientsPage'><Ingredients/></Route>
+        <Route path='/categoriesPage/:categories_name'><CategoriesPage/></Route>
         <Route path='/categoriesPage'><CategoriesPage/></Route>
+        <Route path='/glassesPage/:glass_name'><GlassesPage/></Route>
         <Route path='/glassesPage'><GlassesPage/></Route>
         <Route path='/searchPage'><SearchPage/></Route>
         <Route path='/contacts'><Contacts/></Route>

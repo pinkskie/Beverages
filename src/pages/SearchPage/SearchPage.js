@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './SearchPage.module.css'
 import { Link } from 'react-router-dom'
 import favorites from '../../assets/favorites.png'
+
 const SearchPage = () => {
     
     const [inputText, setInputText] = useState('')
@@ -29,7 +30,11 @@ const SearchPage = () => {
         <>
             <div className={styles.wrapper}>
                 <h1 className={styles.h1x}>Search</h1>
-                <hr className={styles.hrr}/>
+                    <div className={styles.divider}>
+                        <hr/>
+                        <div></div>
+                        <hr/>
+                    </div>
                 <div className={styles.searchInner}>
                     <input 
                         type='text' 
@@ -39,7 +44,7 @@ const SearchPage = () => {
                     </input>  
                     <button>Search</button>
                 </div>
-            <div className={styles.gridWrapper}>
+            <div className={styles.gridWrapper}> 
                 {searchResult.map((val, key) => {
                     return (
                     <div key={val.idDrink} className={styles.coctail}>

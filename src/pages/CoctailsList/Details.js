@@ -8,6 +8,7 @@ import germany from '../../assets/details/de.png'
 import greatBritain from '../../assets/details/gb.png'
 import italy from '../../assets/details/it.png'
 import check from '../../assets/categories/checkmark 1.png'
+import useLocalStorage from '../../utils/useLocalStorage'
 
 const Details = () => {
     const { id } = useParams();
@@ -28,8 +29,17 @@ const Details = () => {
             .map(item => obj[item])
             .filter(Boolean)
     }
+    const [wishlist, setWishlist] = useLocalStorage('wishlist',[]);
+    
+    const addToWishList = cocktail => {
+        if(wishlist.find((x) => x.idDrink === cocktail.idDrink)){
+            return
+        } else {
+            setWishlist([...wishlist,cocktail])  
+        }
+    };
     return  (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper}> 
             <div>
                 <h1>{details.strDrink}</h1>
                 <hr/>
@@ -82,7 +92,7 @@ const Details = () => {
                     </span>
                 </section>
             </div>
-            <button className={styles.Btn}><span>ADD TO WISHLIST</span></button>
+            <button className={styles.Btn} onClick={() => addToWishList(details)}><span>ADD TO WISHLIST</span></button>
         </div>
     )
 }
