@@ -5,12 +5,22 @@ import styles from './Ingredients.module.css'
 import styles2 from '../CoctailsList/Coctails.module.css' 
 import { Link, useParams } from 'react-router-dom'
 import favorites from '../../assets/favorites.png'
-
+import useLocalStorage from '../../utils/useLocalStorage'
 
 const Ingredients = () => {
     const {ingredients_name } = useParams();
     const [ingredients, setIngredients] = useState([])
     const [list , setList] = useState([])
+    const [wishlist, setWishlist] = useLocalStorage('wishlist',[]);
+
+    const removeFromWishList = id => setWishlist([...wishlist.filter(cocktail => cocktail.idDrink !== id)])
+    const addToWishList = cocktail => {
+        if(wishlist.find((x) => x.idDrink === cocktail.idDrink)){
+            removeFromWishList(cocktail.idDrink)
+        } else {
+            setWishlist([...wishlist,cocktail])  
+        }
+    };
 
     useEffect (() => {
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list`)
@@ -29,12 +39,16 @@ const Ingredients = () => {
     return ingredients_name ? (
         <>
         <h1 className={styles2.h1x}>{ingredients_name}</h1>  {/* Component */}
-        <hr className={styles2.hrr}/>
+        <div className={styles.divider}>
+            <hr/>
+            <div></div>
+            <hr/>
+        </div>
         <div className={styles2.wrapper}>
             {list.map(x => (
                 <div key={x.idDrink} className={styles2.coctail}>
                     <Link to={`/coctails/${x.idDrink}`}><img src={x.strDrinkThumb} alt={x.strDrink} /></Link>
-                    <button className={styles2.coctailName}><span>{x.strDrink}<img src={favorites} alt='favorites'/></span></button>
+                    <button className={styles2.coctailName}><span>{x.strDrink}<img src={favorites} onClick={() => addToWishList(x)} alt='favorites'/></span></button>
                 </div>
             ))}
         </div>
